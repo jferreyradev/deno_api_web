@@ -1,7 +1,5 @@
 
-//const URL_API = "http://192.168.1.59:3005"
-
-const URL_API = "http://www.serverburru2.duckdns.org:3005"
+const URL_API = "http://www.serverconcepcion.duckdns.org:3007"
 
 Deno.serve(async (req) => {
     console.log("Method:", req.method);
