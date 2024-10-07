@@ -19,6 +19,7 @@ Deno.serve(async (req) => {
         return new Response(body, {
             status: 404,
             headers: {
+                "Access-Control-Allow-Origin":"*",
                 "content-type": "application/json; charset=utf-8",
             },
         });
@@ -30,6 +31,7 @@ Deno.serve(async (req) => {
             const jsonResponse = await fetch(temp_url, {
                 method: "POST",
                 headers: {
+                    "Access-Control-Allow-Origin":"*",
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify(body)
