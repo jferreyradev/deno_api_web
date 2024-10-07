@@ -16,13 +16,15 @@ Deno.serve(async (req) => {
         const jsonResponse = await fetch(temp_url);
         const jsonData = await jsonResponse.json();
         const body = JSON.stringify(jsonData);
+
         return new Response(body, {
-            status: 404,
+            status: 200 ,
             headers: {
-                "Access-Control-Allow-Origin":"*",
-                "content-type": "application/json; charset=utf-8",
+              "Access-Control-Allow-Origin":"*",
+              "content-type": "application/json; charset=utf-8",
             },
-        });
+          });
+    
     } else if (req.method === "POST" && req.body !== "") {
         if (req.body) {
             const body = await req.json();
